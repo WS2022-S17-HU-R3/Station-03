@@ -1,0 +1,9 @@
+
+@import "~bootstrap/scss/bootstrap";
+$theme-colors: (
+  "primary": #5dd782,
+        "danger": #dc3545
+);
+$body-bg: #eeeeee;
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/buttons";

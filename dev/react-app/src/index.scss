@@ -1,9 +1,62 @@
+@import "~bootstrap/scss/bootstrap.scss";
 
-@import "~bootstrap/scss/bootstrap";
 $theme-colors: (
-  "primary": #5dd782,
-        "danger": #dc3545
+  "primary": #5dd782
 );
-$body-bg: #eeeeee;
-@import "~bootstrap/scss/reboot";
+
 @import "~bootstrap/scss/buttons";
+
+.calendar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-day {
+  width: calc(100% / 7 + 1px);
+  height: 100px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #eeeeee;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  &.check-in{
+    border-radius: 9999px 0 0 9999px;
+  }
+  &.check-out{
+    border-radius: 0 9999px 9999px 0;
+  }
+  &.selected {
+    background: #67ee90;
+    border: 1px solid #67ee90;
+  }
+  &.booked{
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+  }
+}
+
+.calendar-day:first-child{
+  &.calendar-day-of-week-2{
+    margin-left: calc(100% / 7);
+  }
+  &.calendar-day-of-week-3{
+    margin-left: calc(100% / 7 * 2);
+  }
+  &.calendar-day-of-week-4{
+    margin-left: calc(100% / 7 * 3);
+  }
+  &.calendar-day-of-week-5{
+    margin-left: calc(100% / 7 * 4);
+  }
+  &.calendar-day-of-week-6{
+    margin-left: calc(100% / 7 * 5);
+  }
+  &.calendar-day-of-week-0{
+    margin-left: calc(100% / 7 * 6);
+  }
+}
